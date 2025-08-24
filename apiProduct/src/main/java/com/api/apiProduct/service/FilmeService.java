@@ -30,10 +30,10 @@ public class FilmeService {
     public Optional<Filme> findById(Long id){
         return filmeRepository.findById(id);
     }
-
-    public boolean existsById(Long id){
-        return filmeRepository.existsById(id);
-    }
+//
+//    public boolean existsById(Long id){
+//        return filmeRepository.existsById(id);
+//    }
 
     // editar
     public Filme update(Long id, Filme updateProduct){

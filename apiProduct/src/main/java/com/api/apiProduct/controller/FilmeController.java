@@ -17,11 +17,11 @@ import java.util.Optional;
 public class FilmeController {
     @Autowired
     private final FilmeService filmeService;
-    private final FilmeRepository filmeRepository;
+//    private final FilmeRepository filmeRepository;
 
-    public FilmeController(FilmeService filmeService, FilmeRepository filmeRepository) {
+    public FilmeController(FilmeService filmeService){//, FilmeRepository filmeRepository) {
         this.filmeService = filmeService;
-        this.filmeRepository = filmeRepository;
+//        this.filmeRepository = filmeRepository;
     }
 
 
@@ -30,9 +30,9 @@ public class FilmeController {
         return filmeService.getAll();
     }
 
-    @GetMapping("search")
-    public List<Filme> findByTitle(@RequestParam("title") String title) {
-        return filmeRepository.findByTitle(title);
+    @GetMapping("/{id}")
+    public Optional<Filme> findById(@PathVariable Long id) {
+        return filmeService.findById(id);
     }
 
     @PostMapping
