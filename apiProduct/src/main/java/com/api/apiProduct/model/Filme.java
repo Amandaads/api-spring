@@ -1,17 +1,17 @@
 package com.api.apiProduct.model;
 
-import com.api.apiProduct.StatusTarefa;
+import com.api.apiProduct.StatusFilme;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "Tarefa")
+@Table(name = "Filme")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Product {
+public class Filme {
     @Id
     @Column(name = "Id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,5 +24,5 @@ public class Product {
     private String description;
     @Enumerated(EnumType.STRING)
     @Column(name = "Status")
-    private StatusTarefa status;
+    private StatusFilme status;
 }

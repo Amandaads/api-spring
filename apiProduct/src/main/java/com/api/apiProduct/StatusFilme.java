@@ -1,7 +1,8 @@
 package com.api.apiProduct;
 
-public enum StatusTarefa {
-    PENDENTE,
+public enum StatusFilme {
+    FAVORITADO,
     EM_ANDAMENTO,
     CONCLUIDA
+
 }
