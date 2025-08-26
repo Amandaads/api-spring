@@ -8,6 +8,7 @@ Está é uma api de filmes, você é capaz de cadastrar, listar, atualizar e del
 - 1 rota PUT 
 - 1 rota DELETE
 
+https://web.postman.co/workspace/Teste-api~b87dec64-8a67-4edf-91ee-d98743cb9176/collection/42651028-510307f1-1622-4196-8e6d-03143883593e?action=share&source=copy-link&creator=42651028
 
 
 ## Rodando os testes
@@ -37,6 +38,7 @@ Esta API foi construida para a matéria de desenvolvimento web-backend, ao longo
 ## Melhorias
 
 Ao longo da construção da API, achei interessante implementar swagger como forma de documentação e a visualização de testes serem mais amigaveis. E uma melhoria futura implementar um front-end.
+
 
 
 
