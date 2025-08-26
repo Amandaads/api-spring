@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "510307f1-1622-4196-8e6d-03143883593e",
+		"name": "API_FILME",
+		"description": "API_FILME\n\nEsta são as rotas disponiveis e utilizadas pela api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42651028"
+	},
+	"item": [
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Não necessita passar nada pela url"
+			},
+			"response": []
+		},
+		{
+			"name": "get id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/filme/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filme",
+						"2"
+					]
+				},
+				"description": "Passe o id desejado para a consulta"
+			},
+			"response": []
+		},
+		{
+			"name": "post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"description": "Necessário o uso do raw e arquivo json\n\n{    \"title\":\"\",   \n\n\"category\":\"\",   \n\n\"description\":\"\",   \n\n\"status\":\"\"}"
+			},
+			"response": []
+		},
+		{
+			"name": "put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"casa monstro\",\r\n    \"category\":\"terror\",\r\n    \"description\":\"filme sobre casa monstro\",\r\n    \"status\":\"CONCLUIDA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/filme/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filme",
+						"1"
+					]
+				},
+				"description": "Necessário o uso do id, raw e arquivo json\n\n{ \"title\":\"\",\n\n\"category\":\"\",\n\n\"description\":\"\",\n\n\"status\":\"\"}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/filme/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filme",
+						"1"
+					]
+				},
+				"description": "Necessário o uso de id"
+			},
+			"response": []
+		}
+	]
+}
