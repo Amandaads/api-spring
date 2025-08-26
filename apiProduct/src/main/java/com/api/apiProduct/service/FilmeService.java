@@ -17,11 +17,13 @@ public class FilmeService {
         this.filmeRepository = filmeRepository;
     }
 
-    // criar
+     //criar
     public Filme save(Filme filme){
         validate(filme);
         return filmeRepository.save(filme);
     }
+
+
     // listar tudo
     public List<Filme> getAll(){
         return filmeRepository.findAll();
@@ -30,10 +32,6 @@ public class FilmeService {
     public Optional<Filme> findById(Long id){
         return filmeRepository.findById(id);
     }
-//
-//    public boolean existsById(Long id){
-//        return filmeRepository.existsById(id);
-//    }
 
     // editar
     public Filme update(Long id, Filme updateProduct){
@@ -56,6 +54,7 @@ public class FilmeService {
             throw new IllegalArgumentException("The name of title can´t be null");
         }
     }
+
 
 
 }

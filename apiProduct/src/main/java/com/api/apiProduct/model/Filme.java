@@ -1,6 +1,7 @@
 package com.api.apiProduct.model;
 
 import com.api.apiProduct.StatusFilme;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,6 +16,8 @@ public class Filme {
     @Id
     @Column(name = "Id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+
     private Long id;
     @Column(name = "Title")
     private String title;
