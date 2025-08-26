@@ -16,7 +16,7 @@ Para testar a api, há 2 formas e também tem como consultar o banco de dados em
  
 - Postman - **Necessário ter o aplicativo instalado** -
     Para auxilio segue exportação da collection criada com rotas no Postman, basta importar para seu próprio app 
-    [📥 Baixar coleção Postman](./docs/postman/API_FILME.postman_collection.json)
+    [📥 Baixar coleção Postman](apiProduct/src/main/docs/API_FILME.postman_collection.json)
 
     > Certifique-se de estar na mesma rede da aplicação (localhost) para que as requisições funcionem corretamente.
 
@@ -37,5 +37,6 @@ Esta API foi construida para a matéria de desenvolvimento web-backend, ao longo
 ## Melhorias
 
 Ao longo da construção da API, achei interessante implementar swagger como forma de documentação e a visualização de testes serem mais amigaveis. E uma melhoria futura implementar um front-end.
+
 
 
