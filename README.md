@@ -13,10 +13,8 @@ Está é uma api de filmes, você é capaz de cadastrar, listar, atualizar e del
 
 Para testar a api, há 2 formas e também tem como consultar o banco de dados em memória h2
  
-- Postman - **Necessário ter o aplicativo instalado** -
-    Para auxilio segue exportação da collection criada com rotas no Postman, basta importar para seu próprio app 
-    [📥 Baixar coleção Postman](apiProduct/src/main/docs/API_FILME.postman_collection.json)
-
+- Postman
+ https://documenter.getpostman.com/view/42651028/2sB3HjM1qQ
     > Certifique-se de estar na mesma rede da aplicação (localhost) para que as requisições funcionem corretamente.
 
 - Swagger - com a rota http://localhost:8080/swagger-ui.html
@@ -36,6 +34,7 @@ Esta API foi construida para a matéria de desenvolvimento web-backend, ao longo
 ## Melhorias
 
 Ao longo da construção da API, achei interessante implementar swagger como forma de documentação e a visualização de testes serem mais amigaveis. E uma melhoria futura implementar um front-end.
+
 
 
 
