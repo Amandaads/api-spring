@@ -58,29 +58,7 @@ public class FilmeController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
-    // teste pra passar o dto, pro swagger n colocar no body id
-//    @Operation(description = "Adiciona um novo filme")
-//    @PostMapping
-//    public ResponseEntity<?> create(@RequestBody FilmeDTO filmeDTO){
-//        try {
-//            Filme saved = filmeService.save(filmeDTO);
-//            System.out.println("Salvo: " + saved.getTitle() + ", " + saved.getId());
-//
-//            FilmeDTO createdDTO = new FilmeDTO();
-//            createdDTO.setId(saved.getId());
-//            createdDTO.setTitle(saved.getTitle());
-//            createdDTO.setCategory(saved.getCategory());
-//            createdDTO.setDescription(saved.getDescription());
-//            createdDTO.setStatus(saved.getStatus());
-//
-//            URI location = URI.create("/filme/" + saved.getId());
-//            return ResponseEntity.created(location).body(createdDTO);
-//
-//
-//        } catch (IllegalArgumentException e){
-//            return ResponseEntity.badRequest().body(e.getMessage());
-//        }
-//    }
+
 
     @Operation(description = "Atualiza um filme, passando o id na requisição")
     @PutMapping("/{id}")
@@ -93,12 +71,19 @@ public class FilmeController {
         }
     }
 
+//
+//    @Operation(description = "Exclui um filme, passando o id na requisição")
+//    @DeleteMapping("/{id}")
+//    public String delete(@PathVariable Long id){
+//
+//        return filmeService.delete(id);
+//    }
+@DeleteMapping("/{id}")
+@ResponseStatus(HttpStatus.NO_CONTENT) // Retorna 204 se der certo
+public void delete(@PathVariable Long id){
+    filmeService.delete(id);
 
-    @Operation(description = "Exclui um filme, passando o id na requisição")
-    @DeleteMapping("/{id}")
-    public String delete(@PathVariable Long id){
-        return filmeService.delete(id);
-    }
+}
 
 
 }

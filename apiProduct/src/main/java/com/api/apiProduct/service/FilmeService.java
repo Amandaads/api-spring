@@ -1,5 +1,8 @@
 package com.api.apiProduct.service;
 
+import org.springframework.web.server.ResponseStatusException;
+import org.springframework.http.HttpStatus;
+
 import com.api.apiProduct.model.Filme;
 import com.api.apiProduct.repository.FilmeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,10 +47,19 @@ public class FilmeService {
         return filmeRepository.save(filme);
     }
     // delete
-    public String delete(Long id){
+//    public String delete(Long id){
+//        filmeRepository.deleteById(id);
+//        return "movie deleted";
+//    }
+    public void delete(Long id) {
+        if (!filmeRepository.existsById(id)) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Filme não encontrado");
+        }
+
         filmeRepository.deleteById(id);
-        return "movie deleted";
+
     }
+
 
     private void validate(Filme filme){
         if (filme.getTitle() == null)  {
